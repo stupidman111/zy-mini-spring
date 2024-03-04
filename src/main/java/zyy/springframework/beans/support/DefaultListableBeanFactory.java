@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class DefaultListableBeanFactory extends AbstractAutowiredCapableBeanFactory implements BeanDefinitionRegistry{
 
-  private final Map<String, BeanDefinition> beanDefinitionMap = new HashMap<>();
+  private Map<String, BeanDefinition> beanDefinitionMap = new HashMap<>();
   @Override
   protected BeanDefinition getBeanDefinition(String beanName) throws BeansException {
 	BeanDefinition beanDefinition = beanDefinitionMap.get(beanName);
@@ -20,4 +20,5 @@ public class DefaultListableBeanFactory extends AbstractAutowiredCapableBeanFact
   public void registerBeanDefinition(String beanName, BeanDefinition beanDefinition) {
 	beanDefinitionMap.put(beanName, beanDefinition);
   }
+
 }

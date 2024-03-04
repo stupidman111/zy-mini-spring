@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class DefaultSingletonBeanRegistry implements SingletonBeanRegistry {
 
-  private final Map<String, Object> singletonObjects = new HashMap<>();
+  private final Map<String, Object> singletonObjects = new HashMap<>();//单例Bean对象池（final确保对应对象引用不可变性）
 
 
   @Override
